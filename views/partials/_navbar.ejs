@@ -1,0 +1,13 @@
+<% if (user) { %>
+<h1>Welcome, <%= user.username %>!</h1>
+<a href="/recipes">View Recipes</a>
+<a href="/ingredients">View Ingredient</a>
+<a href="/ingredients/new">Add New Ingredients</a>
+<a href="/recipes/new">add New Recipe</a>
+<a href="/auth/sign-out">Sign-out</a>
+<% } else { %>
+<h1>Welcome, guest.</h1>
+<p>
+  <a href="/auth/sign-up">Sign up</a> or <a href="/auth/sign-in">sign in</a>.
+</p>
+<% } %>

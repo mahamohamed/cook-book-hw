@@ -1,0 +1,20 @@
+
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>My Ingredients</h1>
+    <ul>
+      <% ingredients.forEach((Ingredient) => { %>
+      <li>
+        <%= Ingredient.name %>
+        <form
+          method="POST"
+          action="/ingredients/<%= Ingredient._id %>?_method=DELETE"
+        >
+          <button type="submit">Delete Ingredient</button>
+        </form>
+      </li>
+
+      <% }) %>
+    </ul>
+  </body>
+
